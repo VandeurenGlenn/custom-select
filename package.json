@@ -1,0 +1,14 @@
+{
+  "name": "@vandeurenglenn/custom-select",
+  "version": "0.1.0",
+  "description": "",
+  "browser": "./custom-select",
+  "module": "./custom-select",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
