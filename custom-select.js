@@ -118,7 +118,6 @@ export default customElements.define('custom-select', class customSelect extends
       }
       .expand {
         pointer-events: auto;
-        padding-left: 6px;
         transform: rotate(270deg);
         font-size: 24px;
         font-weight: 800;
@@ -149,6 +148,10 @@ export default customElements.define('custom-select', class customSelect extends
         flex-direction: row;
         align-items: center;
         flex: 1;
+      }
+
+      .selected {
+        padding-right: 12px;
       }
 
     </style>
