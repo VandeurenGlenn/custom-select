@@ -1,6 +1,6 @@
 {
   "name": "@vandeurenglenn/custom-select",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "browser": "./custom-select",
   "module": "./custom-select",
