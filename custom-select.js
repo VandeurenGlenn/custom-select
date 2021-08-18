@@ -39,10 +39,6 @@ export default customElements.define('custom-select', class customSelect extends
     }
   }
 
-  _onSelected(selected) {
-    console.log(selected);
-  }
-
   set selected(value) {
     this.setAttribute('selected', value)
     this.shadowRoot.querySelector('.selected').innerHTML = value
@@ -60,8 +56,6 @@ export default customElements.define('custom-select', class customSelect extends
     } else
       this.removeAttribute('opened')
       document.removeEventListener('mouseup', () => this.opened = false);
-
-    console.log(value);
   }
 
   get template() {
@@ -85,28 +79,32 @@ export default customElements.define('custom-select', class customSelect extends
       .dropdown {
         position: absolute;
         opacity: 0;
-        left: 0;
         top: 0;
+        left: 0;
         min-height: 110px;
         max-height: 240px;
+        width: max-content;
         background: #333;
         border: 1px solid rgba(0,0,0,0.5);
         user-select: none;
-        pointer-events: none;
         overflow: auto;
         z-index: 1001;
         display: flex;
         flex-direction: column;
         padding: 12px;
         box-sizing: border-box;
-        height: 100%;
         outline: none;
         align-items: center;
         background: var(--main-background-color);
         border-color: var(--hero-border-color);
         border-radius: var(--hero-border-radius);
         color: var(--hero-color);
-        pointer-events: none !important;
+        pointer-events: var(--dropdown-pointer-events, auto);
+      }
+
+      :host([right]) .dropdown {
+        right: 0;
+        left: auto;
       }
 
       span.row {
