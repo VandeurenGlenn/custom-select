@@ -99,7 +99,7 @@ export default customElements.define('custom-select', class customSelect extends
         border-color: var(--hero-border-color);
         border-radius: var(--hero-border-radius);
         color: var(--hero-color);
-        pointer-events: var(--dropdown-pointer-events, auto);
+        pointer-events: none;
       }
 
       :host([right]) .dropdown {
@@ -122,6 +122,9 @@ export default customElements.define('custom-select', class customSelect extends
       }
       :host([opened]) .dropdown, :host([opened]) ::slotted(*) {
         opacity: 1;
+      }
+      :host([opened]) .dropdown {
+        pointer-events: auto;
       }
       :host([opened]) ::slotted(*) {
         pointer-events: auto !important;
